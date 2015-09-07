@@ -52,21 +52,6 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-"taglist
-"map <F2> :TlistOpen<CR>
-map <F2> :TlistToggle <CR>
-"禁止自动改变当前Vim窗口的大小
-let Tlist_Inc_Winwidth=0
-"把方法列表放在屏幕的右侧
-let Tlist_Use_Right_Window=1
-"让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
-let Tlist_File_Fold_Auto_Close=1
-
-let Tlist_GainFocus_On_ToggleOpen=0
-
-"let Tlist_Auto_Open=1
-
-let Tlist_Exit_OnlyWindow=1
 
 
 "让vim记忆上次编辑的位置
@@ -74,12 +59,12 @@ autocmd BufReadPost *
                            \ if line("'\"")>0&&line("'\"")<=line("$") |
                            \        exe "normal g'\"" |
                            \ endif
-"让vim记忆上次编辑的位置
 
 if filereadable("/etc/vim/vimrc.local")
     source /etc/vim/vimrc.local
 endif
 
+" cscope
 if has("cscope")
         set csprg=/usr/bin/cscope
         set csto=0
@@ -97,6 +82,7 @@ if has("cscope")
   "      set cscopequickfix=s-,g-,c-,d-,t-,e-,f-,i-
 endif
 
+" map key
 "map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>  "这样，就可以用F3快速地实现左侧文件夹目录窗口的显示/隐藏
 
@@ -104,3 +90,20 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeT
 let NERDTreeCaseSensitiveSor=1
 let NERDTreeHighlightCursorline=1
 "autocmd vimenter * NERDTree  "打开vim时自动打开NERDTree
+
+
+"srcexplr
+ nmap <F8> :SrcExplToggle<CR>
+
+"taglist
+"map <F2> :TlistOpen<CR>
+map <F2> :TlistToggle <CR>
+"禁止自动改变当前Vim窗口的大小
+let Tlist_Inc_Winwidth=0
+"把方法列表放在屏幕的右侧
+let Tlist_Use_Right_Window=1
+"让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_GainFocus_On_ToggleOpen=0
+"let Tlist_Auto_Open=1
+let Tlist_Exit_OnlyWindow=1
