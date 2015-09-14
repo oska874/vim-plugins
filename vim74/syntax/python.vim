@@ -53,6 +53,9 @@ set cpo&vim
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set autoindent
+set cindent
+
 
 " Keep Python keywords in alphabetical order inside groups for easy
 " comparison with the table in the 'Python Language Reference'
