@@ -38,3 +38,6 @@ programming languages.
 	You know.
 
 	usage: cs ... 
+
+5. syntax(c/python)
+	change tab width and softtab width
