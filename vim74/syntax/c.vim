@@ -477,3 +477,4 @@ unlet s:cpo_save
 " vim: ts=8
 set expandtab
 set tabstop=4
+set shiftwidth=4
