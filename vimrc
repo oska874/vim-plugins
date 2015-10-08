@@ -107,3 +107,6 @@ let Tlist_File_Fold_Auto_Close=1
 let Tlist_GainFocus_On_ToggleOpen=0
 "let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
+
+" enable encoding utf8
+set encoding=utf8
