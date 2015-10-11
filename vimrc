@@ -26,15 +26,15 @@ endif
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -45,23 +45,11 @@ endif
 "set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+set mouse=a		" Enable mouse usage (all modes)
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
-endif
-
-
-
-"让vim记忆上次编辑的位置
-autocmd BufReadPost *
-                           \ if line("'\"")>0&&line("'\"")<=line("$") |
-                           \        exe "normal g'\"" |
-                           \ endif
-
-if filereadable("/etc/vim/vimrc.local")
-    source /etc/vim/vimrc.local
 endif
 
 " cscope
@@ -84,16 +72,15 @@ endif
 
 " map key
 "map <F3> :NERDTreeMirror<CR>
-map <F3> :NERDTreeToggle<CR>  "这样，就可以用F3快速地实现左侧文件夹目录窗口的显示/隐藏
+map <F3> :NERDTreeToggle<CR>  " 这样，就可以用F3快速地实现左侧文件夹目录窗口的显示/隐藏
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif  "如果打开的文件除了NERDTree没有其他文件时，它自动关闭，减少多次按:q!。
 let NERDTreeCaseSensitiveSor=1
 let NERDTreeHighlightCursorline=1
 "autocmd vimenter * NERDTree  "打开vim时自动打开NERDTree
 
-
 "srcexplr
- nmap <F8> :SrcExplToggle<CR>
+nmap <F8> :SrcExplToggle<CR>
 
 "taglist
 "map <F2> :TlistOpen<CR>
@@ -110,3 +97,6 @@ let Tlist_Exit_OnlyWindow=1
 
 " enable encoding utf8
 set encoding=utf8
+set number
+colorscheme desert
+
