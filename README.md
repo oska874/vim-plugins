@@ -13,6 +13,32 @@ plugins:
 	from: https://github.com/scrooloose/nerdtree.git
 	
 	usage: F3, open and close
+	
+	fix install procedure in ubuntu 16.04:
+	
+	prepare
+	
+	```	
+	 mkdir -p ~/.vim/autoload ~/.vim/bundle;
+	 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+	```
+	
+	`vim /etc/vim/vimrc` add below:
+	
+	```
+	" Pathogen
+	execute pathogen#infect()
+	call pathogen#helptags() " generate helptags for everything in ‘runtimepath’
+	syntax on
+	filetype plugin indent on
+	```
+	
+	install nerdtree
+	```
+	cd ~/.vim/bundle
+	git clone https://github.com/scrooloose/nerdtree.git
+	```
+
 
 2. taglist: 
 
