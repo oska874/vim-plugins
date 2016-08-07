@@ -67,3 +67,31 @@ programming languages.
 
 5. syntax(c/python)
 	change tab width and softtab width
+
+6. 问题：
+
+- 无法记住上次编辑文件的位置？
+  已经在～/.vimrc中增加了下面一行：
+
+  ```
+  au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+  ```
+  
+  但是依然无法记住上次编辑的位置。
+  
+  原因：
+  
+  ```
+  [zhang@ubuntu: ~]$ll ./.viminfo 
+  -rw------- 1 root root 4558 2011-12-09 13:58 ./.viminfo
+  ```
+  
+  原来记录位置的文件仅仅对root开放了读写权限。
+  
+  解决办法：
+  对非root用户增加对~/.viminfo的读写权限
+  
+  ```
+  sudo chmod a+w ./.viminfo 
+  sudo chmod a+R ./.viminfo
+  ```
