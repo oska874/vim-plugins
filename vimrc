@@ -100,3 +100,5 @@ set encoding=utf8
 set number
 colorscheme desert
 
+"srcexplr
+nmap <F8> :SrcExplToggle<CR>
