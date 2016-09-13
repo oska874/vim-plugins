@@ -8,6 +8,10 @@ environment:
 	
 	cscope, ctags
 
+screenshot
+
+![](https://github.com/oska874/vim-plugins/blob/master/screen_shot.png)
+
 usage:
 
 1. 将 vim74 目录下的内容直接复制到 vim 安装目录（如 `/usr/local/share/vim/vim80`）
@@ -67,6 +71,8 @@ programming languages.
 	from: https://github.com/oska874/vim-plugins.git
 	
 	usage: F8,open and close
+	
+	**attention** ：  before you use SrcExplr ,you should first `ctags -R` first in you source code ,or it cannot find the symbols.
 
 4. cscope
 	
