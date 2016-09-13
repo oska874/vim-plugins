@@ -1,8 +1,17 @@
 my vim plugin settings.
+
 environment: 
+
 	ubuntu 15.04(14.04)
+	
 	vim 7.4
+	
 	cscope, ctags
+
+usage:
+
+1. 将 vim74 目录下的内容直接复制到 vim 安装目录（如 `/usr/local/share/vim/vim80`）
+2. 将 vimrc 复制到 `~/` ，并重命名为 `.vimrc`
 
 plugins:
 
