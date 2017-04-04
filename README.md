@@ -110,3 +110,6 @@ programming languages.
   sudo chmod a+w ./.viminfo 
   sudo chmod a+R ./.viminfo
   ```
+7. gtags
+
+  使用方法：在代码目录直接运行 `gtags`，然后在 vim 中按照tags 和cscope 的用法即可
