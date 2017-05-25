@@ -49,7 +49,9 @@ set smartcase		" Do smart case matching
 
 let &termencoding=&encoding
 set fileencodings=utf-8,gb18030,gbk,gb2312,big5
-
+set termencoding=utf-8
+set encoding=utf-8
+   
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
