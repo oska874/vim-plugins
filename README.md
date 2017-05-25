@@ -15,7 +15,8 @@ screenshot
 usage:
 
 1. 将 vim74 目录下的内容直接复制到 vim 安装目录（如 `/usr/local/share/vim/vim80`）
-2. 将 .vimrc 复制到 `~/` 
+  a. nerdtree 需要参照下面的 plugins 1 安装 pathogen.vim
+2. 将 .vimrc 复制到 `~/` (根据实际情况替换已有的 vim 配置文件)
 
 plugins:
 
