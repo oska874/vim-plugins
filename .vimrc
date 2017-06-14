@@ -127,6 +127,7 @@ endif
 set csverb
 
 
+set backspace=indent,eol,start
 " gtags
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
