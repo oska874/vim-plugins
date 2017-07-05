@@ -115,5 +115,7 @@ programming languages.
 7. gtags
 
     使用方法：在代码目录直接运行 `gtags`，然后在 vim 中按照tags 和cscope 的用法即可
+
     ps: gtags 的索引效果不如cscope好，但是命令简单
-  ps2: 如果不想用gtags的索引可以修改 .vimrc，删除其中和gtags相关的配置项（即120~133 行）
+
+    ps2: 如果不想用gtags的索引可以修改 .vimrc，删除其中和gtags相关的配置项（即120~133 行）
