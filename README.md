@@ -34,7 +34,7 @@ plugins:
 	
 	```	
 	 mkdir -p ~/.vim/autoload ~/.vim/bundle;
-	 wget -o ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+	 wget -O ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 	```
 	
 	`vim /etc/vim/vimrc` (or `~/.vimrc` depends on your configuration) add below(I've added it in .vimrc):
