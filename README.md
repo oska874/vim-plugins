@@ -14,7 +14,7 @@ screenshot
 
 usage:
 
-1. 将 vim74 目录下的内容直接复制到 vim 安装目录（如 `/usr/local/share/vim/vim80`）
+1. 将 vim74 目录下的内容直接复制到 vim 安装目录（如 `/usr/share/vim/vim80`）
   a. nerdtree 需要参照下面的 plugins 1 安装 pathogen.vim 或者尝试直接将 bundle 拷贝到 `~/.vim/`
 2. 将 .vimrc 复制到 `~/` (根据实际情况替换已有的 vim 配置文件)
 
@@ -47,10 +47,11 @@ plugins:
 	filetype plugin indent on
 	```
 	
-	install nerdtree
+    如果默认的 nerdtree 有问题，可以下载最新版更新/修补
+
 	```
-	cd ~/.vim/bundle
 	git clone https://github.com/scrooloose/nerdtree.git
+    sudo cp -r nerdtree/* /usr/share/vim/vim74/
 	```
 
 

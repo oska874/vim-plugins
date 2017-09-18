@@ -113,7 +113,7 @@ let Tlist_GainFocus_On_ToggleOpen=0
 let Tlist_Exit_OnlyWindow=1
 let Tlist_WinWidth=30
 "srcexplr
-nmap <F8> :SrcExplToggle<CR>
+nmap <F4> :SrcExplToggle<CR>
 
 
 
