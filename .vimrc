@@ -132,3 +132,79 @@ set backspace=indent,eol,start
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
+
+" rainbow
+au FileType c,cpp,objc,objcpp call rainbow#load()
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+" lightline
+
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
+      \ },
+      \ 'component': {
+      \   'helloworld': 'Hello, world!'
+      \ },
+      \ }
+" nerd commenter
+" filetype plugin on
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+" gitgutter
+let num = 500
+sign define Foo text=*
+
+new
+
+call append(0, range(1, num))
+
+set updatetime=100
+for i in range(1, num)
+  execute "sign place ".i." line=".i." name=Foo buffer=".bufnr('')
+endfor
+
+let start = reltime()
+for i in range(1, num)
+  execute "sign unplace ".i
+endfor
+let elapsed = reltime(start)
+
+bdelete!
+
+
+"echom split(reltimestr(elapsed))[0]."s to remove ".num." signs"
+"echom string(reltimefloat(elapsed) * 1000 / num).' ms/sign'
+"echom string(float2nr(num / reltimefloat(elapsed))).' sign/s'
