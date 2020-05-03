@@ -1,0 +1,3 @@
+[submodule "vim-protobuf"]
+	path = vim-protobuf
+	url = https://github.com/uarun/vim-protobuf.git

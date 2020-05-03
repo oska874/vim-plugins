@@ -1,11 +1,20 @@
 " Vim syntax file
+<<<<<<< HEAD
 " Language:     DBC File
 "       "*.dbc"
+=======
+" Language: 	DBC File
+" 		"*.dbc"
+>>>>>>> 70a638bfede348ff53013dc062b3cb2870cb6353
 " Maintainer: Richard Howe
 " Latest Revision: 10 October 2016
 
 if exists("b:current_syntax")
+<<<<<<< HEAD
     finish
+=======
+	finish
+>>>>>>> 70a638bfede348ff53013dc062b3cb2870cb6353
 endif
 
 syn keyword dbcSymbols CM_ BA_DEF_ BA_ VAL_ CAT_DEF_ CAT_ FILTER BA_DEF_DEF_
